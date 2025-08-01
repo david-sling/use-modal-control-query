@@ -12,7 +12,8 @@
       "files": [
         {
           "path": "registry/hooks/use-modal-control-query/hooks/use-modal-control-query.ts",
-          "type": "registry:hook"
+          "type": "registry:hook",
+          "target": "hooks/use-modal-control-query.ts"
         }
       ]
     },
@@ -25,14 +26,14 @@
       "registryDependencies": ["dialog", "button"],
       "files": [
         {
-          "path": "registry/hooks/use-modal-control-query/hooks/use-modal-control-query.ts",
-          "type": "registry:hook",
-          "target": "hooks/use-modal-control-query.ts"
-        },
-        {
           "path": "registry/hooks/use-modal-control-query/app/simple-examlple/page.tsx",
           "type": "registry:page",
           "target": "app/simple-example/page.tsx"
+        },
+        {
+          "path": "registry/hooks/use-modal-control-query/hooks/use-modal-control-query.ts",
+          "type": "registry:hook",
+          "target": "hooks/use-modal-control-query.ts"
         }
       ]
     }
