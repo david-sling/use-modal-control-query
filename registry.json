@@ -4,59 +4,35 @@
   "homepage": "https://acme.com",
   "items": [
     {
-      "name": "hello-world",
-      "type": "registry:component",
-      "title": "Hello World",
-      "description": "A simple hello world component",
-      "registryDependencies": ["button"],
+      "name": "use-modal-control-query",
+      "type": "registry:hook",
+      "title": "useModalControlQuery",
+      "description": "A hook to control shadcn modal components",
+      "dependencies": ["nuqs"],
       "files": [
         {
-          "path": "registry/new-york/hello-world/hello-world.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "example-form",
-      "type": "registry:component",
-      "title": "Example Form",
-      "description": "A contact form with Zod validation.",
-      "dependencies": ["zod"],
-      "registryDependencies": ["button", "input", "label", "textarea", "card"],
-      "files": [
-        {
-          "path": "registry/new-york/example-form/example-form.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "complex-component",
-      "type": "registry:component",
-      "title": "Complex Component",
-      "description": "A complex component showing hooks, libs and components.",
-      "registryDependencies": ["card"],
-      "files": [
-        {
-          "path": "registry/new-york/complex-component/page.tsx",
-          "type": "registry:page",
-          "target": "app/pokemon/page.tsx"
-        },
-        {
-          "path": "registry/new-york/complex-component/components/pokemon-card.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/complex-component/components/pokemon-image.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/complex-component/lib/pokemon.ts",
-          "type": "registry:lib"
-        },
-        {
-          "path": "registry/new-york/complex-component/hooks/use-pokemon.ts",
+          "path": "registry/hooks/use-modal-control-query/hooks/use-modal-control-query.ts",
           "type": "registry:hook"
+        }
+      ]
+    },
+    {
+      "name": "simple-example-use-mcq",
+      "type": "registry:component",
+      "title": "useModalControlQuery",
+      "description": "A simple implementation of the useModalControlQuery hook",
+      "dependencies": ["nuqs"],
+      "registryDependencies": ["dialog", "button"],
+      "files": [
+        {
+          "path": "registry/hooks/use-modal-control-query/hooks/use-modal-control-query.ts",
+          "type": "registry:hook",
+          "target": "hooks/use-modal-control-query.ts"
+        },
+        {
+          "path": "registry/hooks/use-modal-control-query/app/simple-examlple/page.tsx",
+          "type": "registry:page",
+          "target": "app/simple-example/page.tsx"
         }
       ]
     }
