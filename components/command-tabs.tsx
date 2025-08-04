@@ -1,11 +1,11 @@
 'use client'
-import React, { useState } from 'react'
-import { Clipboard, SquareTerminal, Check } from 'lucide-react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Separator } from '@/components/ui/separator'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import { Button } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import { cn } from '@/lib/utils'
+import { Check, Clipboard, SquareTerminal } from 'lucide-react'
+import { useState } from 'react'
 
 interface CommandItem {
   label: string

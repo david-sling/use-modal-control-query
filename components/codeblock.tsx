@@ -1,11 +1,11 @@
 'use client'
 
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
+import { cn } from '@/lib/utils'
+import { Check, Clipboard } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import type { BundledLanguage } from 'shiki'
 import { codeToHtml } from 'shiki'
-import { Clipboard, Check } from 'lucide-react'
-import { useState, useEffect } from 'react'
-import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip'
-import { cn } from '@/lib/utils'
 
 type Props = {
   children: string

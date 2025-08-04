@@ -1,6 +1,6 @@
 import CommandBlock from '@/components/command-tabs'
 import { Example } from '@/components/example'
-import { getAddItemCommands, getRegistryJson } from '@/lib/registry'
+import { getAddItemCommands } from '@/lib/registry'
 import SimpleExampleMCQ from '@/registry/hooks/use-modal-control-query/app/simple-example/page'
 import Link from 'next/link'
 
