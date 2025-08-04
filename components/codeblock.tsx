@@ -33,7 +33,6 @@ export function CodeBlock({
         colorReplacements: {
           '#0d1117': 'var(--card)',
           '#ffffff': 'var(--card)',
-          '#e6edf3': '#000',
         },
       })
       setHtml(out)
