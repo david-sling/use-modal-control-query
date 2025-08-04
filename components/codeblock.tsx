@@ -33,6 +33,7 @@ export function CodeBlock({
         colorReplacements: {
           '#0d1117': 'var(--card)',
           '#ffffff': 'var(--card)',
+          '#e6edf3': '#000',
         },
       })
       setHtml(out)
@@ -62,7 +63,7 @@ export function CodeBlock({
 
   return (
     <div
-      className={cn('relative rounded-md text-sm overflow-auto border shadow', className)}
+      className={cn('relative rounded-md text-sm overflow-auto border', className)}
       style={{ height: '100%', maxHeight: `${height}px` }}
     >
       <div className="sticky top-5 flex justify-end -mt-8 mr-5">

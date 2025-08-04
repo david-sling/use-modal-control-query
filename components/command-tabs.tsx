@@ -74,7 +74,9 @@ function SingleCommandBlock({
           </>
         )}
         <div className="px-4 font-mono bg-card overflow-x-auto">
-          <p className="text-muted-foreground break-words whitespace-pre-wrap">{command}</p>
+          <p className="text-muted-foreground break-words whitespace-pre-wrap font-normal text-sm">
+            {command}
+          </p>
         </div>
       </div>
     </div>
@@ -112,9 +114,9 @@ function MultiCommandBlock({
       <Tabs
         value={activeTab}
         onValueChange={setActiveTab}
-        className="w-full bg-card rounded-md border gap-0"
+        className="w-full bg-card rounded-md gap-0"
       >
-        <TabsList className="flex w-full bg-card justify-between items-center px-2 py-1 my-1 rounded-t-md">
+        <TabsList className="flex w-full bg-card justify-between items-center px-2 py-1 pt-2 my-1 rounded-t-md">
           <div className="flex items-center">
             {showTerminalIcon && (
               <SquareTerminal className="mx-2 text-muted-foreground" size={20} />
@@ -124,7 +126,7 @@ function MultiCommandBlock({
                 <TabsTrigger
                   key={tab.label}
                   value={tab.label}
-                  className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+                  className="border border-transparent data-[state=active]:bg-card data-[state=active]:border-input data-[state=active]:text-foreground data-[state=active]:shadow-sm"
                 >
                   {tab.label}
                 </TabsTrigger>
@@ -154,7 +156,9 @@ function MultiCommandBlock({
             value={tab.label}
             className="mt-0 px-4 font-mono bg-card rounded-b-md overflow-x-auto py-2"
           >
-            <p className="text-muted-foreground break-words whitespace-pre-wrap">{tab.command}</p>
+            <p className="text-muted-foreground break-words whitespace-pre-wrap font-normal text-sm">
+              {tab.command}
+            </p>
           </TabsContent>
         ))}
       </Tabs>

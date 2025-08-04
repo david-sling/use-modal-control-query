@@ -1,6 +1,6 @@
 import CommandBlock from '@/components/command-tabs'
 import { Example } from '@/components/example'
-import { getRegistryJson } from '@/lib/registry'
+import { getAddItemCommands, getRegistryJson } from '@/lib/registry'
 import SimpleExampleMCQ from '@/registry/hooks/use-modal-control-query/app/simple-example/page'
 import Link from 'next/link'
 
@@ -27,14 +27,10 @@ export default function Home() {
         </p>
       </header>
       <main className="flex flex-col flex-1 gap-8">
-        <CommandBlock
-          commands={[
-            {
-              label: 'npx',
-              command: `npx shadcn@latest add ${getRegistryJson('use-modal-control-query')}`,
-            },
-          ]}
-        />
+        <div className="flex flex-col gap-2 font-semibold">
+          <h2 className="text-2xl">Installation</h2>
+          <CommandBlock commands={getAddItemCommands('use-modal-control-query')} />
+        </div>
         <Example
           name={simpleExample.name}
           code={simpleExample.files.find((f) => f.target === simpleExample.meta.main)?.content!}
