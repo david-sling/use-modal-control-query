@@ -2,13 +2,12 @@ import CommandBlock from '@/components/command-tabs'
 import { Example } from '@/components/example'
 import { getAddItemCommands, getMainRegistryFile } from '@/lib/registry'
 import SimpleExampleMCQ from '@/registry/hooks/use-modal-control-query/app/simple-example/page'
-import Link from 'next/link'
 import StateExample from '@/registry/hooks/use-modal-control-query/app/state-example/page'
 
+import { Logo } from '@/components/logo'
 import simpleExample from '@/public/r/simple-example-use-mcq.json'
 import stateExample from '@/public/r/state-example-use-mcq.json'
 import { RegistryItem } from 'shadcn/registry'
-import { Logo } from '@/components/logo'
 
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
