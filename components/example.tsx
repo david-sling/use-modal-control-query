@@ -13,7 +13,7 @@ export const Example: FC<{
   label?: string
 }> = ({ children, code, name, openInV0, label }) => (
   <div className="flex flex-col gap-1">
-    {label && <h2 className="text-2xl">{label}</h2>}
+    {label && <h2 className="text-2xl font-semibold">{label}</h2>}
     <Tabs defaultValue="preview">
       <div className="flex items-center justify-between">
         <TabsList className="-mx-3 bg-background">
