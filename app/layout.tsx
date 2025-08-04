@@ -30,7 +30,9 @@ export default function RootLayout({
       <Suspense>
         <TooltipProvider>
           <NuqsAdapter>
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}>
+            <body
+              className={`${geistSans.variable} ${geistMono.variable} antialiased dark bg-background text-foreground`}
+            >
               {children}
             </body>
           </NuqsAdapter>
