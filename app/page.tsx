@@ -8,6 +8,7 @@ import StateExample from '@/registry/hooks/use-modal-control-query/app/state-exa
 import simpleExample from '@/public/r/simple-example-use-mcq.json'
 import stateExample from '@/public/r/state-example-use-mcq.json'
 import { RegistryItem } from 'shadcn/registry'
+import { Logo } from '@/components/logo'
 
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
@@ -16,7 +17,10 @@ export default function Home() {
   return (
     <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
       <header className="flex flex-col gap-1">
-        <h1 className="text-4xl font-bold tracking-tight mb-2">useModalControlQuery</h1>
+        <div className="mb-2 flex items-center gap-5">
+          <Logo className="h-20 w-20" />
+          <h1 className="text-4xl font-bold tracking-tight">useModalControlQuery</h1>
+        </div>
         <p className="text-muted-foreground">
           A hook to control shadcn{' '}
           <Link target="_blank" href="https://ui.shadcn.com/docs/components/sheet">
@@ -35,6 +39,7 @@ export default function Home() {
           <CommandBlock commands={getAddItemCommands('use-modal-control-query')} />
         </div>
         <Example
+          label="Usage"
           name={simpleExample.name}
           code={getMainRegistryFile(simpleExample as RegistryItem) ?? ''}
         >

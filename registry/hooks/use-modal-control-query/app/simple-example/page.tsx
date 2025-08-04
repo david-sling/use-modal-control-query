@@ -11,7 +11,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { useModalControlQuery } from '../../hooks/use-modal-control-query'
 
-export default function SimpleExampleMCQ() {
+export default function SimpleExample() {
   const dialog = useModalControlQuery('hello')
   return (
     <Dialog {...dialog.control}>

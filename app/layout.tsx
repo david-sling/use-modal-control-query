@@ -4,6 +4,7 @@ import './globals.css'
 import { NuqsAdapter } from 'nuqs/adapters/next'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { Suspense } from 'react'
+import { Footer } from '@/components/footer'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -38,6 +39,7 @@ export default function RootLayout({
           </NuqsAdapter>
         </TooltipProvider>
       </Suspense>
+      <Footer />
     </html>
   )
 }
