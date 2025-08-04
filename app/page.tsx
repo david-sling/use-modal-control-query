@@ -1,10 +1,13 @@
 import CommandBlock from '@/components/command-tabs'
 import { Example } from '@/components/example'
-import { getAddItemCommands } from '@/lib/registry'
+import { getAddItemCommands, getMainRegistryFile } from '@/lib/registry'
 import SimpleExampleMCQ from '@/registry/hooks/use-modal-control-query/app/simple-example/page'
 import Link from 'next/link'
+import StateExample from '@/registry/hooks/use-modal-control-query/app/state-example/page'
 
 import simpleExample from '@/public/r/simple-example-use-mcq.json'
+import stateExample from '@/public/r/state-example-use-mcq.json'
+import { RegistryItem } from 'shadcn/registry'
 
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
@@ -26,18 +29,23 @@ export default function Home() {
           components using query params
         </p>
       </header>
-      <main className="flex flex-col flex-1 gap-8">
+      <main className="flex flex-col flex-1 gap-16">
         <div className="flex flex-col gap-2 font-semibold">
           <h2 className="text-2xl">Installation</h2>
           <CommandBlock commands={getAddItemCommands('use-modal-control-query')} />
         </div>
         <Example
           name={simpleExample.name}
-          code={
-            simpleExample.files.find((f) => f.target === simpleExample.meta.main)?.content ?? ''
-          }
+          code={getMainRegistryFile(simpleExample as RegistryItem) ?? ''}
         >
           <SimpleExampleMCQ />
+        </Example>
+        <Example
+          name={stateExample.name}
+          code={getMainRegistryFile(stateExample as RegistryItem) ?? ''}
+          label="Using state in query"
+        >
+          <StateExample />
         </Example>
       </main>
     </div>

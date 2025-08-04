@@ -10,9 +10,10 @@ export const Example: FC<{
   code: string
   children: ReactNode
   openInV0?: boolean
-}> = ({ children, code, name, openInV0 }) => (
+  label?: string
+}> = ({ children, code, name, openInV0, label }) => (
   <div className="flex flex-col gap-1">
-    {/* <h2 className="text-sm text-muted-foreground sm:pl-3">A simple implementation</h2> */}
+    {label && <h2 className="text-2xl">{label}</h2>}
     <Tabs defaultValue="preview">
       <div className="flex items-center justify-between">
         <TabsList className="-mx-3 bg-background">

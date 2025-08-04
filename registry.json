@@ -43,6 +43,32 @@
           "target": "hooks/use-modal-control-query.ts"
         }
       ]
+    },
+    {
+      "name": "state-example-use-mcq",
+      "type": "registry:component",
+      "title": "useModalControlQuery",
+      "description": "A simple implementation of the useModalControlQuery hook",
+      "dependencies": ["nuqs"],
+      "registryDependencies": ["sheet", "button"],
+      "meta": { "main": "app/state-example/page.tsx" },
+      "files": [
+        {
+          "path": "registry/hooks/use-modal-control-query/app/state-example/page.tsx",
+          "type": "registry:page",
+          "target": "app/state-example/page.tsx"
+        },
+        {
+          "path": "registry/hooks/use-modal-control-query/app/state-example/layout.tsx",
+          "type": "registry:page",
+          "target": "app/state-example/layout.tsx"
+        },
+        {
+          "path": "registry/hooks/use-modal-control-query/hooks/use-modal-control-query.ts",
+          "type": "registry:hook",
+          "target": "hooks/use-modal-control-query.ts"
+        }
+      ]
     }
   ]
 }
