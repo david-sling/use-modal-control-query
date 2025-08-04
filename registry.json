@@ -26,9 +26,14 @@
       "registryDependencies": ["dialog", "button"],
       "files": [
         {
-          "path": "registry/hooks/use-modal-control-query/app/simple-examlple/page.tsx",
+          "path": "registry/hooks/use-modal-control-query/app/simple-example/page.tsx",
           "type": "registry:page",
           "target": "app/simple-example/page.tsx"
+        },
+        {
+          "path": "registry/hooks/use-modal-control-query/app/simple-example/layout.tsx",
+          "type": "registry:page",
+          "target": "app/simple-example/layout.tsx"
         },
         {
           "path": "registry/hooks/use-modal-control-query/hooks/use-modal-control-query.ts",

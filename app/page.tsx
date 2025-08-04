@@ -3,7 +3,7 @@ import CommandBlock from '@/components/command-tabs'
 import { OpenInV0Button } from '@/components/open-in-v0-button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { getRegistryJson } from '@/lib/registry'
-import SimpleExampleMCQ from '@/registry/hooks/use-modal-control-query/app/simple-examlple/page'
+import SimpleExampleMCQ from '@/registry/hooks/use-modal-control-query/app/simple-example/page'
 import Link from 'next/link'
 
 // This page displays items from the custom registry.
@@ -62,6 +62,14 @@ export default function Home() {
               </TabsContent>
             </Tabs>
           </div>
+          <CommandBlock
+            commands={[
+              {
+                label: 'npx',
+                command: `npx shadcn@latest add ${getRegistryJson('simple-example-use-mcq')}`,
+              },
+            ]}
+          />
         </div>
       </main>
     </div>
