@@ -33,7 +33,9 @@ export default function Home() {
         </div>
         <Example
           name={simpleExample.name}
-          code={simpleExample.files.find((f) => f.target === simpleExample.meta.main)?.content!}
+          code={
+            simpleExample.files.find((f) => f.target === simpleExample.meta.main)?.content ?? ''
+          }
         >
           <SimpleExampleMCQ />
         </Example>
