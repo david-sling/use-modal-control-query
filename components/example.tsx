@@ -1,10 +1,9 @@
-import { getAddItemCommands, getRegistryJson } from '@/lib/registry'
-import SimpleExampleMCQ from '@/registry/hooks/use-modal-control-query/app/simple-example/page'
+import { getAddItemCommands } from '@/lib/registry'
+import { FC, ReactNode } from 'react'
 import { CodeBlock } from './codeblock'
 import CommandBlock from './command-tabs'
 import { OpenInV0Button } from './open-in-v0-button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs'
-import { FC, ReactNode } from 'react'
 
 export const Example: FC<{
   name: string
