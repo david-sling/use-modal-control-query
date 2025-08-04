@@ -1,10 +1,10 @@
-import { CodeBlock } from '@/components/codeblock'
 import CommandBlock from '@/components/command-tabs'
-import { OpenInV0Button } from '@/components/open-in-v0-button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Example } from '@/components/example'
 import { getRegistryJson } from '@/lib/registry'
 import SimpleExampleMCQ from '@/registry/hooks/use-modal-control-query/app/simple-example/page'
 import Link from 'next/link'
+
+import simpleExample from '@/public/r/simple-example-use-mcq.json'
 
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
@@ -35,42 +35,12 @@ export default function Home() {
             },
           ]}
         />
-        <div className="flex flex-col gap-1">
-          {/* <h2 className="text-sm text-muted-foreground sm:pl-3">A simple implementation</h2> */}
-          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
-            <Tabs defaultValue="preview">
-              <div className="flex items-center justify-between">
-                <TabsList>
-                  <TabsTrigger value="preview">Preview</TabsTrigger>
-                  <TabsTrigger value="code">Code</TabsTrigger>
-                </TabsList>
-                <OpenInV0Button name="simple-example-use-mcq" />
-              </div>
-              <TabsContent value="preview">
-                <div className="flex items-center justify-center min-h-[400px] relative">
-                  <SimpleExampleMCQ />
-                </div>
-              </TabsContent>
-              <TabsContent value="code">
-                <div className="w-full h-full">
-                  <CodeBlock className="w-full h-full border-0 text-sm py-5" lang="tsx">
-                    {
-                      "'use client'\n\nimport {\n  Dialog,\n  DialogContent,\n  DialogDescription,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from '@/components/ui/dialog'\nimport { Button } from '@/components/ui/button'\nimport { useModalControlQuery } from '../../hooks/use-modal-control-query'\n\nexport default function SimpleExampleMCQ() {\n  const dialog = useModalControlQuery('hello')\n  return (\n    <Dialog {...dialog.control}>\n      <DialogTrigger asChild>\n        <Button>Say Hello</Button>\n      </DialogTrigger>\n      <DialogContent>\n        <DialogHeader>\n          <DialogTitle>Hello</DialogTitle>\n          <DialogDescription>Notice how the url parameters are updated</DialogDescription>\n        </DialogHeader>\n      </DialogContent>\n    </Dialog>\n  )\n}\n"
-                    }
-                  </CodeBlock>
-                </div>
-              </TabsContent>
-            </Tabs>
-          </div>
-          <CommandBlock
-            commands={[
-              {
-                label: 'npx',
-                command: `npx shadcn@latest add ${getRegistryJson('simple-example-use-mcq')}`,
-              },
-            ]}
-          />
-        </div>
+        <Example
+          name={simpleExample.name}
+          code={simpleExample.files.find((f) => f.target === simpleExample.meta.main)?.content!}
+        >
+          <SimpleExampleMCQ />
+        </Example>
       </main>
     </div>
   )

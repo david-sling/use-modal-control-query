@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "acme",
   "homepage": "https://acme.com",
+
   "items": [
     {
       "name": "use-modal-control-query",
@@ -24,6 +25,7 @@
       "description": "A simple implementation of the useModalControlQuery hook",
       "dependencies": ["nuqs"],
       "registryDependencies": ["dialog", "button"],
+      "meta": { "main": "app/simple-example/page.tsx" },
       "files": [
         {
           "path": "registry/hooks/use-modal-control-query/app/simple-example/page.tsx",
