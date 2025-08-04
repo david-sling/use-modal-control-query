@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://acme.com",
+  "name": "use-modal-control-query",
+  "homepage": "https://use-mcq.davidsling.in",
 
   "items": [
     {
       "name": "use-modal-control-query",
       "type": "registry:hook",
-      "title": "useModalControlQuery",
+      "title": "use-modal-control-query",
       "description": "A hook to control shadcn modal components",
       "dependencies": ["nuqs"],
       "files": [
@@ -21,10 +21,14 @@
     {
       "name": "simple-example-use-mcq",
       "type": "registry:component",
-      "title": "useModalControlQuery",
+      "title": "Simple example | use-modal-control-query",
       "description": "A simple implementation of the useModalControlQuery hook",
       "dependencies": ["nuqs"],
-      "registryDependencies": ["dialog", "button"],
+      "registryDependencies": [
+        "dialog",
+        "button",
+        "https://use-mcq.davidsling.in/r/use-modal-control-query.json"
+      ],
       "meta": { "main": "app/simple-example/page.tsx" },
       "files": [
         {
@@ -36,21 +40,20 @@
           "path": "registry/hooks/use-modal-control-query/app/simple-example/layout.tsx",
           "type": "registry:page",
           "target": "app/simple-example/layout.tsx"
-        },
-        {
-          "path": "registry/hooks/use-modal-control-query/hooks/use-modal-control-query.ts",
-          "type": "registry:hook",
-          "target": "hooks/use-modal-control-query.ts"
         }
       ]
     },
     {
       "name": "state-example-use-mcq",
       "type": "registry:component",
-      "title": "useModalControlQuery",
+      "title": "State example | use-modal-control-query",
       "description": "A simple implementation of the useModalControlQuery hook",
       "dependencies": ["nuqs"],
-      "registryDependencies": ["sheet", "button"],
+      "registryDependencies": [
+        "sheet",
+        "button",
+        "https://use-mcq.davidsling.in/r/use-modal-control-query.json"
+      ],
       "meta": { "main": "app/state-example/page.tsx" },
       "files": [
         {
@@ -62,11 +65,6 @@
           "path": "registry/hooks/use-modal-control-query/app/state-example/layout.tsx",
           "type": "registry:page",
           "target": "app/state-example/layout.tsx"
-        },
-        {
-          "path": "registry/hooks/use-modal-control-query/hooks/use-modal-control-query.ts",
-          "type": "registry:hook",
-          "target": "hooks/use-modal-control-query.ts"
         }
       ]
     }
