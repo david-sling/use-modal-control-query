@@ -36,12 +36,12 @@ export default function RootLayout({
               className={`${geistSans.variable} ${geistMono.variable} antialiased dark bg-background text-foreground`}
             >
               {children}
+              <Footer />
+              <Analytics />
             </body>
           </NuqsAdapter>
         </TooltipProvider>
       </Suspense>
-      <Footer />
-      <Analytics />
     </html>
   )
 }
