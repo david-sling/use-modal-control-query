@@ -1,7 +1,6 @@
 import { CodeBlock } from '@/components/codeblock'
 import CommandBlock from '@/components/command-tabs'
 import { OpenInV0Button } from '@/components/open-in-v0-button'
-import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { getRegistryJson } from '@/lib/registry'
 import SimpleExampleMCQ from '@/registry/hooks/use-modal-control-query/app/simple-examlple/page'
