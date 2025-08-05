@@ -15,7 +15,11 @@ export const Footer = () => (
           davidsling.in
         </Link>
       </p>
-      <Link target="_blank" href="https://github.com/david-sling/use-modal-control-query">
+      <Link
+        aria-label="View on GitHub"
+        target="_blank"
+        href="https://github.com/david-sling/use-modal-control-query"
+      >
         <GitHubLogo className="h-7 w-7" />
       </Link>
     </div>

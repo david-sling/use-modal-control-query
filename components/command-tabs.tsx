@@ -61,6 +61,7 @@ function SingleCommandBlock({
                     size="sm"
                     className="h-8 w-8 p-0"
                     onClick={() => copyToClipboard(command)}
+                    name="copy to clipboard"
                   >
                     {copied ? <Check size={18} /> : <Clipboard size={20} />}
                   </Button>
@@ -140,6 +141,7 @@ function MultiCommandBlock({
                 size="sm"
                 className="h-8 w-8 p-0"
                 onClick={() => copyToClipboard(activeCommand)}
+                name="copy to clipboard"
               >
                 {copied ? <Check size={20} /> : <Clipboard size={20} />}
               </Button>
