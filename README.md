@@ -1,23 +1,49 @@
-# registry-template
+# useModalControlQuery
 
-You can use the `shadcn` CLI to run your own component registry. Running your own
-component registry allows you to distribute your custom components, hooks, pages, and
-other files to any React project.
+A hook to control shadcn modal components using query params
 
-> [!IMPORTANT]  
-> This template uses Tailwind v3. For Tailwind v4, see [registry-template](https://github.com/shadcn-ui/registry-template-v4).
+## Installation
 
-## Getting Started
+```bash
+npx shadcn@latest add https://use-mcq.davidsling.in/r/use-modal-control-query.json
+```
 
-This is a template for creating a custom registry using Next.js.
+## Usage
 
-- The template uses a `registry.json` file to define components and their files.
-- The `shadcn build` command is used to build the registry.
-- The registry items are served as static files under `public/r/[name].json`.
-- The template also includes a route handler for serving registry items.
-- Every registry item are compatible with the `shadcn` CLI.
-- We have also added v0 integration using the `Open in v0` api.
+```tsx
+'use client'
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog'
+import { Button } from '@/components/ui/button'
+import { useModalControlQuery } from '../../hooks/use-modal-control-query'
+
+export default function SimpleExample() {
+  const dialog = useModalControlQuery('hello')
+  return (
+    <Dialog {...dialog.control}>
+      <DialogTrigger asChild>
+        <Button>Say Hello</Button>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Hello</DialogTitle>
+          <DialogDescription>Notice how the url parameters are updated</DialogDescription>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
+  )
+}
+```
+
+The above code will update the query parameters to be `?modal=hello` when the modal is open. It will also ensure that if the page is reloaded with the query parameter present, the modal stays open.
 
 ## Documentation
 
-Visit the [shadcn documentation](https://ui.shadcn.com/docs/registry) to view the full documentation.
+Visit the [use-mcq documentation](https://use-mcq.davidsling.in) to view the full documentation.
