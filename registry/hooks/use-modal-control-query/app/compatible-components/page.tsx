@@ -40,7 +40,7 @@ export default function CompatibleComponents() {
   const [tab, setTab] = useQueryState('tab', parseAsString.withDefault('dialog'))
   return (
     <Tabs value={tab} onValueChange={setTab} className="flex flex-col items-center">
-      <TabsList>
+      <TabsList className="flex-wrap">
         <TabsTrigger value="dialog">Dialog</TabsTrigger>
         <TabsTrigger value="sheet">Sheet</TabsTrigger>
         <TabsTrigger value="drawer">Drawer</TabsTrigger>
