@@ -44,6 +44,17 @@ export default function SimpleExample() {
 
 The above code will update the query parameters to be `?modal=hello` when the modal is open. It will also ensure that if the page is reloaded with the query parameter present, the modal stays open.
 
+## Compatible components
+
+The following shadcn components are compatible with use-mcq
+
+- [dialog](https://ui.shadcn.com/docs/components/dialog)
+- [sheet](https://ui.shadcn.com/docs/components/sheet)
+- [drawer](https://ui.shadcn.com/docs/components/drawer)
+- [select](https://ui.shadcn.com/docs/components/select)
+- [dropdown-menu](https://ui.shadcn.com/docs/components/dropdown-menu)
+- [collapsible](https://ui.shadcn.com/docs/components/collapsible)
+
 ## Live Example
 
 Live example available at https://use-mcq.davidsling.in
