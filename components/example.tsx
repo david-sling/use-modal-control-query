@@ -35,6 +35,9 @@ export const Example: FC<{
         </div>
       </TabsContent>
     </Tabs>
+    <h3 className="mt-5 font-semibold opacity-70">
+      Use the below command to copy the above code into your codebase
+    </h3>
     <CommandBlock commands={getAddItemCommands(name)} />
   </div>
 )

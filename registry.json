@@ -23,7 +23,6 @@
       "type": "registry:component",
       "title": "Simple example | use-modal-control-query",
       "description": "A simple implementation of the useModalControlQuery hook",
-      "dependencies": ["nuqs"],
       "registryDependencies": [
         "dialog",
         "button",
@@ -48,7 +47,6 @@
       "type": "registry:component",
       "title": "State example | use-modal-control-query",
       "description": "A simple implementation of the useModalControlQuery hook",
-      "dependencies": ["nuqs"],
       "registryDependencies": [
         "sheet",
         "button",
@@ -65,6 +63,36 @@
           "path": "registry/hooks/use-modal-control-query/app/state-example/layout.tsx",
           "type": "registry:page",
           "target": "app/state-example/layout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "compatible-components-example-use-mcq",
+      "type": "registry:component",
+      "title": "State example | use-modal-control-query",
+      "description": "A simple implementation of the useModalControlQuery hook",
+      "dependencies": ["nuqs"],
+      "registryDependencies": [
+        "button",
+        "dialog",
+        "sheet",
+        "drawer",
+        "dropdown-menu",
+        "select",
+        "collapsible",
+        "https://use-mcq.davidsling.in/r/use-modal-control-query.json"
+      ],
+      "meta": { "main": "app/compatible-components/page.tsx" },
+      "files": [
+        {
+          "path": "registry/hooks/use-modal-control-query/app/compatible-components/page.tsx",
+          "type": "registry:page",
+          "target": "app/compatible-components/page.tsx"
+        },
+        {
+          "path": "registry/hooks/use-modal-control-query/app/compatible-components/layout.tsx",
+          "type": "registry:page",
+          "target": "app/compatible-components/layout.tsx"
         }
       ]
     }

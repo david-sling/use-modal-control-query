@@ -20,6 +20,10 @@ export const getAddItemCommands = (name: string) => [
     label: 'bun',
     command: `bunx --bun shadcn@latest add ${getRegistryJson(name)}`,
   },
+  {
+    label: 'antfu/ni',
+    command: `nlx shadcn@latest add ${getRegistryJson(name)}`,
+  },
 ]
 
 export const getMainRegistryFile = (registryItem: RegistryItem) =>

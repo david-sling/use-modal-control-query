@@ -5,8 +5,10 @@ import SimpleExampleMCQ from '@/registry/hooks/use-modal-control-query/app/simpl
 import StateExample from '@/registry/hooks/use-modal-control-query/app/state-example/page'
 
 import { Logo } from '@/components/logo'
+import compatibleExample from '@/public/r/compatible-components-example-use-mcq.json'
 import simpleExample from '@/public/r/simple-example-use-mcq.json'
 import stateExample from '@/public/r/state-example-use-mcq.json'
+import CompatibleComponents from '@/registry/hooks/use-modal-control-query/app/compatible-components/page'
 import { RegistryItem } from 'shadcn/registry'
 
 // This page displays items from the custom registry.
@@ -16,9 +18,11 @@ export default function Home() {
   return (
     <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
       <header className="flex flex-col gap-1">
-        <div className="mb-2 flex items-center gap-5">
-          <Logo className="h-20 w-20" />
-          <h1 className="text-4xl font-bold tracking-tight">useModalControlQuery</h1>
+        <div className="mb-2 flex items-center gap-3 md:gap-5 flex-wrap">
+          <Logo className="h-5 w-10 md:h-10 md:w-20" />
+          <h1 className="text-2xl md:text-4xl font-bold tracking-tight break-words flex-1 max-w-full">
+            useModalControlQuery
+          </h1>
         </div>
         <p className="text-muted-foreground">
           A hook to control shadcn modal components using query params
@@ -42,6 +46,13 @@ export default function Home() {
           label="Using state in query"
         >
           <StateExample />
+        </Example>
+        <Example
+          name="compatible-components-example-use-mcq"
+          code={getMainRegistryFile(compatibleExample as RegistryItem) ?? ''}
+          label="You can use the hook with the following components"
+        >
+          <CompatibleComponents />
         </Example>
       </main>
     </div>
