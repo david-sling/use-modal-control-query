@@ -44,6 +44,10 @@ export default function SimpleExample() {
 
 The above code will update the query parameters to be `?modal=hello` when the modal is open. It will also ensure that if the page is reloaded with the query parameter present, the modal stays open.
 
+## Live Example
+
+Live example available at https://use-mcq.davidsling.in
+
 ## Documentation
 
 Visit the [use-mcq documentation](https://use-mcq.davidsling.in) to view the full documentation.
