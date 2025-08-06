@@ -1,3 +1,5 @@
+// usage docs: https://use-mcq.davidsling.in
+
 import { Options, parseAsString, useQueryState } from 'nuqs'
 
 export const useModalControlQuery = <HasState extends boolean = false>(
